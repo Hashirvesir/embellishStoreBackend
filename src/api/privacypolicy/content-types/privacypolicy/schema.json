@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "privacypolicies",
+  "info": {
+    "singularName": "privacypolicy",
+    "pluralName": "privacypolicies",
+    "displayName": "privacypolicy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "required": true
+    },
+    "headingParagraph": {
+      "type": "richtext"
+    },
+    "cardtext": {
+      "type": "string",
+      "required": true
+    },
+    "cardParagraph": {
+      "type": "richtext"
+    }
+  }
+}

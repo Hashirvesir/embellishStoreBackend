@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homecategoryimgs",
+  "info": {
+    "singularName": "homecategoryimg",
+    "pluralName": "homecategoryimgs",
+    "displayName": "homecategoryimg",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

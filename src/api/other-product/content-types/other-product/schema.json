@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "other_products",
+  "info": {
+    "singularName": "other-product",
+    "pluralName": "other-products",
+    "displayName": "otherProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "others": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::other.other",
+      "inversedBy": "other_products"
+    },
+    "orignal_price": {
+      "type": "decimal"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "size": {
+      "type": "json"
+    },
+    "category": {
+      "type": "string",
+      "default": "other",
+      "required": true
+    }
+  }
+}

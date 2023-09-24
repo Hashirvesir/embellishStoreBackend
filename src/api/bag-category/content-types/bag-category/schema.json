@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bag_categories",
+  "info": {
+    "singularName": "bag-category",
+    "pluralName": "bag-categories",
+    "displayName": "bagProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "bags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bag.bag",
+      "mappedBy": "bag_products"
+    },
+    "orignal_price": {
+      "type": "decimal"
+    },
+    "size": {
+      "type": "json"
+    },
+    "category": {
+      "type": "string",
+      "required": true,
+      "default": "bag"
+    }
+  }
+}

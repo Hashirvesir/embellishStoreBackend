@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bags",
+  "info": {
+    "singularName": "bag",
+    "pluralName": "bags",
+    "displayName": "Bag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "bag_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bag-category.bag-category",
+      "inversedBy": "bags"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true,
+      "default": "bag"
+    }
+  }
+}

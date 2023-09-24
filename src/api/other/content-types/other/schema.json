@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "others",
+  "info": {
+    "singularName": "other",
+    "pluralName": "others",
+    "displayName": "other",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "other_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::other-product.other-product",
+      "mappedBy": "others"
+    },
+    "category": {
+      "type": "string",
+      "required": true,
+      "default": "other"
+    }
+  }
+}

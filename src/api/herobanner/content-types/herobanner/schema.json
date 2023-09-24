@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "herobanners",
+  "info": {
+    "singularName": "herobanner",
+    "pluralName": "herobanners",
+    "displayName": "herobanner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
